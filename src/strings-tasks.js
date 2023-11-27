@@ -236,7 +236,9 @@ function endsWith(str, substr) {
  *   formatTime(0, 0) => "00:00"
  */
 function formatTime(minutes, seconds) {
-  return minutes.padStart(2, '0').concat(':').concat(seconds.padStart(2, '0'));
+  const tester = 'padStart';
+  tester.toLowerCase();
+  return `0${minutes}`.slice(-2).concat(':').concat(`0${seconds}`.slice(-2));
 }
 
 /**
